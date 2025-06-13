@@ -1,4 +1,4 @@
-# Video File Renamer
+# Video Renamer
 
 A command-line utility to rename video files by appending their duration in a concise format.
 
@@ -30,7 +30,7 @@ A command-line utility to rename video files by appending their duration in a co
 
 ## Usage
 
-- Process the current directory:
+- Display help message:
   ```sh
   ./vidlen
   ```
