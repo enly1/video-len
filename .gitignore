@@ -1,11 +1,11 @@
 # Compiled binary
 video-renamer
+vidlen
 *.exe
 *.out
 *.o
 
 # Go modules and build files
-go.mod
 go.sum
 *.test
 *.coverprofile
