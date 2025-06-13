@@ -142,7 +142,6 @@ func printHelp() {
 	fmt.Println("  -R            Process directories recursively")
 	fmt.Println("Description:")
 	fmt.Println("  Renames video files by appending their duration in [XhYm] or [Ym] format.")
-	fmt.Println("  If no path is provided, processes the current directory.")
 	fmt.Println("  If a path is provided, processes either the named file or the directory contents.")
 }
 
@@ -158,25 +157,24 @@ func main() {
 		}
 	}
 
+	if len(args) == 0 {
+		printHelp()
+		os.Exit(0)
+	}
+
 	if len(args) > 1 {
 		fmt.Println("Usage: vidlen [file_or_directory_path]")
 		os.Exit(1)
 	}
 
-	if len(args) == 1 {
-		if args[0] == "-h" || args[0] == "--help" {
-			printHelp()
-			os.Exit(0)
-		}
-		path := args[0]
-		if err := processVideoFiles(path, recursive); err != nil {
-			fmt.Printf("Error: %v\n", err)
-			os.Exit(1)
-		}
-	} else {
-		if err := processVideoFiles(".", recursive); err != nil {
-			fmt.Printf("Error: %v\n", err)
-			os.Exit(1)
-		}
+	if args[0] == "-h" || args[0] == "--help" {
+		printHelp()
+		os.Exit(0)
+	}
+
+	path := args[0]
+	if err := processVideoFiles(path, recursive); err != nil {
+		fmt.Printf("Error: %v\n", err)
+		os.Exit(1)
 	}
 }
