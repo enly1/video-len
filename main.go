@@ -136,7 +136,7 @@ func processVideoFiles(path string, recursive bool) error {
 }
 
 func printHelp() {
-	fmt.Println("Usage: video-renamer [file_or_directory_path]")
+	fmt.Println("Usage: vidlen [file_or_directory_path]")
 	fmt.Println("Options:")
 	fmt.Println("  -h, --help    Display this help message")
 	fmt.Println("  -R            Process directories recursively")
@@ -159,7 +159,7 @@ func main() {
 	}
 
 	if len(args) > 1 {
-		fmt.Println("Usage: video-renamer [file_or_directory_path]")
+		fmt.Println("Usage: vidlen [file_or_directory_path]")
 		os.Exit(1)
 	}
 
