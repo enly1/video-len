@@ -25,34 +25,34 @@ A command-line utility to rename video files by appending their duration in a co
 
 2. Build the executable:
    ```sh
-   go build -o video-renamer
+   go build
    ```
 
 ## Usage
 
 - Process the current directory:
   ```sh
-  ./video-renamer
+  ./vidlen
   ```
 
 - Process a specific file:
   ```sh
-  ./video-renamer /path/to/video.mp4
+  ./vidlen /path/to/video.mp4
   ```
 
 - Process a directory:
   ```sh
-  ./video-renamer /path/to/directory
+  ./vidlen /path/to/directory
   ```
 
 - Process a directory recursively:
   ```sh
-  ./video-renamer /path/to/directory -R
+  ./vidlen /path/to/directory -R
   ```
 
 - Display help message:
   ```sh
-  ./video-renamer -h
+  ./vidlen -h
   ```
 
 ## Example
