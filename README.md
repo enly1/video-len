@@ -1,4 +1,4 @@
-# Video Renamer
+# Video File Renamer
 
 A command-line utility to rename video files by appending their duration in a concise format.
 
