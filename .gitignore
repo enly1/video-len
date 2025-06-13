@@ -1,0 +1,28 @@
+# Compiled binary
+video-renamer
+*.exe
+*.out
+*.o
+
+# Go modules and build files
+go.mod
+go.sum
+*.test
+*.coverprofile
+*.prof
+
+# Go workspace files
+.idea/
+.vscode/
+
+# Video files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.webm
+
+# OS files
+.DS_Store 
